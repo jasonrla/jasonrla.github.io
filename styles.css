@@ -20,8 +20,23 @@ body {
 .container {
     max-width: 1200px;
     width: 100%;
+    height: 100vh;
     padding: 0 20px;
     background-color: var(--column-color);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/colour/technology-background-design-in-white-color-free-vector.jpg'); /* Reemplaza 'images/background.jpg' con la ruta a tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido del contenedor */
+    opacity: 0.08; /* Ajusta la opacidad de la imagen */
 }
 
 .header {
@@ -149,12 +164,12 @@ z-index: 1;
 
 td:first-child {
     width: 140px; /* Ajusta el ancho de la columna de nombres de programación */
-  }
+}
 
-  .grid-container {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    gap: 20px; /* Espacio entre las secciones */
+    gap: 10px; /* Espacio entre las secciones */
 }
 
 .tab-links {
