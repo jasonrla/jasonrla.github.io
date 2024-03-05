@@ -20,6 +20,24 @@ document.addEventListener('DOMContentLoaded', function() {
         const textNode = bar.querySelector("span");
         animateProgressBar(bar, textNode, progress);
     });
+
+    const checkbox = document.getElementById('checkbox');
+    checkbox.addEventListener('change', () => {
+        let root = document.documentElement;
+        if (checkbox.checked) {
+            root.style.setProperty('--primary-color', 'var(--primary-color-dark)');
+            root.style.setProperty('--secondary-color', 'var(--secondary-color-dark)');
+            root.style.setProperty('--column-color', 'var(--column-color-dark)');
+            root.style.setProperty('--text-color', 'var(--text-color-dark)');
+            root.style.setProperty('--text-pogressbar', 'var(--text-pogressbar-dark)');
+        } else {
+            root.style.setProperty('--primary-color', 'var(--primary-color-light)');
+            root.style.setProperty('--secondary-color', 'var(--secondary-color-light)');
+            root.style.setProperty('--column-color', 'var(--column-color-light)');
+            root.style.setProperty('--text-color', 'var(--text-color-light)');
+            root.style.setProperty('--text-pogressbar', 'var(--text-pogressbar-light)');
+        }
+    });
 });
 
 

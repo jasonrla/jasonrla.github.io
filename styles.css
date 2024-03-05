@@ -1,8 +1,21 @@
 :root {
-    --primary-color: rgb(11, 107, 166);
-    --secondary-color: rgb(11, 107, 166);
-    --column-color: rgb(11, 107, 166);
-    --text-color: #fff;
+    --primary-color-light: rgb(255, 255, 255);
+    --secondary-color-light: rgb(255, 255, 255);
+    --column-color-light: rgb(255, 255, 255);
+    --text-color-light: #2b2626;
+    --text-pogressbar-light: #6b6b6b;
+
+    --primary-color-dark: rgb(0, 0, 0);
+    --secondary-color-dark: rgb(0, 0, 0);
+    --column-color-dark: rgb(0, 0, 0);
+    --text-color-dark: #ffffff;
+    --text-pogressbar-dark: rgb(255, 255, 255);
+
+    --primary-color: var(--primary-color-light);
+    --secondary-color: var(--secondary-color-light);
+    --column-color: var(--column-color-light);
+    --text-color: var(--text-color-light);
+    --text-pogressbar: var(--text-pogressbar-light);
     --font-family: 'Robot', monospace;
 }
 
@@ -16,6 +29,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 
 .container {
     max-width: 1200px;
@@ -36,20 +50,35 @@ body {
     background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     z-index: -1; /* Asegura que la imagen esté detrás del contenido del contenedor */
-    opacity: 0.04; /* Ajusta la opacidad de la imagen */
+    opacity: 0.25; /* Ajusta la opacidad de la imagen */
 }
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 30px 20px; /* Aumenta el relleno superior e inferior */
     /*background-color: var(--primary-color);*/
-    color: white;
+    color: var(--text-color);
+}
+.icon-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-group-2 {
+    padding-top: 40px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.icon-group-3 {
+    display: flex;
+    align-items: center;
 }
 
 .header h1 {
-    margin: 0 0 10px 0; /* Agrega un margen inferior */
+    margin: 0 0 0px 0; /* Agrega un margen inferior */
     font-size: 2em;
 }
 
@@ -62,6 +91,7 @@ body {
     background-color: #fff;
     padding: 5px;
     border-radius: 10px 10px 10px 10px; /* Redondea solo la parte superior */
+    margin-right: 10px;
 }
 
 .img-background {
@@ -109,13 +139,22 @@ a {
 }
 
 
+#AboutMe, #Contact{
+    padding: 10px;
+}
+
+#Contact.tab-content p {
+    padding: 5px; /* Ajusta este valor a tu gusto */
+}
+
 .calendly{
+    padding-left: 10px;
     width: 100px;
     height: 50px;
 }
 
 .languages {
-    margin: 20px;
+    margin: 10px;
 }
 
 table {
@@ -142,7 +181,7 @@ box-shadow: 0 0 5px rgba(0, 0, 0, 0); /* Añade una sombra */
 content: '';
 display: block;
 height: 100%;
-background-color: #f0f0f0;
+background-color: var(--text-pogressbar);
 position: absolute;
 top: 0;
 left: 0;
@@ -161,7 +200,7 @@ to {
 
 .progress-bar span {
 position: absolute;
-left: 15px; /* Ajusta el valor según tu preferencia */
+left: 10px; /* Ajusta el valor según tu preferencia */
 top: 50%;
 transform: translateY(-50%);
 color: var(--secondary-color);
@@ -175,7 +214,7 @@ td:first-child {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    gap: 10px; /* Espacio entre las secciones */
+    
 }
 
 .tab-links {
@@ -190,27 +229,83 @@ td:first-child {
     padding: 10px 15px;
     cursor: pointer;
     font-size: 18px;
-    color: white;
+    color: var(--text-color);
     transition: color 0.3s ease;
     outline: none;
 }
 
 .tab-link:hover {
     color: var(--secondary-color);
-    background-color: white;
+    background-color: var(--text-color);
     border-radius: 10px 10px 0 0; /* Redondea solo la parte superior */
 }
 
 .tab-link.active {
     color: var(--secondary-color);
-    background-color: white; /* Añade un color de fondo diferente para el tab activo */
+    background-color: var(--text-color); /* Añade un color de fondo diferente para el tab activo */
     border-radius: 10px 10px 0 0; /* Redondea solo la parte superior */
 }
 
 .tab-link.active:hover {
-    background-color: white; /* Cambia el color de fondo a blanco cuando se pasa el mouse sobre el tab activo */
+    background-color: var(--text-color);/* Cambia el color de fondo a blanco cuando se pasa el mouse sobre el tab activo */
+}
+/*
+.bold-text {
+    font-weight: bold; /* Hace que el texto sea negrita 
+}
+*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
 }
 
-.bold-text {
-    font-weight: bold; /* Hace que el texto sea negrita */
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #000000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
