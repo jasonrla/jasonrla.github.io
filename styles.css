@@ -198,114 +198,273 @@ to {
 }
 }
 
+
 .progress-bar span {
-position: absolute;
-left: 10px; /* Ajusta el valor según tu preferencia */
-top: 50%;
-transform: translateY(-50%);
-color: var(--secondary-color);
-z-index: 1;
+    position: absolute;
+    left: 10px; /* Ajusta el valor según tu preferencia */
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+    z-index: 1;
+    }
+    
+    td:first-child {
+        width: 140px; /* Ajusta el ancho de la columna de nombres de programación */
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+    }
+    
+    .tab-links {
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+    
+    .tab-link {
+        background: none;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 18px;
+        color: var(--text-color);
+        transition: color 0.3s ease;
+        outline: none;
+    }
+    
+    .tab-link:hover {
+        color: var(--secondary-color);
+        background-color: var(--text-color);
+        border-radius: 10px 10px 0 0; /* Redondea solo la parte superior */
+    }
+    
+    .tab-link.active {
+        color: var(--secondary-color);
+        background-color: var(--text-color); /* Añade un color de fondo diferente para el tab activo */
+        border-radius: 10px 10px 0 0; /* Redondea solo la parte superior */
+    }
+    
+    .tab-link.active:hover {
+        background-color: var(--text-color);/* Cambia el color de fondo a blanco cuando se pasa el mouse sobre el tab activo */
+    }
+    /*
+    .bold-text {
+        font-weight: bold; /* Hace que el texto sea negrita 
+    }
+    */
+    .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+    
+    .theme-switch {
+        display: inline-block;
+        height: 34px;
+        position: relative;
+        width: 60px;
+    }
+    
+    .theme-switch input {
+        display:none;
+    }
+    
+    .slider {
+        background-color: #ccc;
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        background-color: #fff;
+        bottom: 4px;
+        content: "";
+        height: 26px;
+        left: 4px;
+        position: absolute;
+        transition: .4s;
+        width: 26px;
+    }
+    
+    input:checked + .slider {
+        background-color: #000000;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
+    
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+/* Estilos para pantallas de tamaño medio (por ejemplo, tablets) */
+@media screen and (max-width: 768px) {
+    .container {
+      padding: 0 20px; /* Reduce el padding */
+    }
+  
+    .header {
+      flex-direction: column; /* Cambia la dirección del flex */
+      padding: 20px 10px; /* Reduce el padding */
+    }
+  
+    #AboutMe, #Contact{
+        padding-top: 0px;
+    }
+
+    .languages {
+        margin-top: 0px;
+    }
+
+    .icon-group{
+        padding-top: 20px;
+        justify-content:space-around;
+        align-items: center; /* Centra los elementos */
+    }
+
+    .icon-group-2{
+        padding-top: 5px;
+        justify-content:space-around;
+        align-items: center; /* Centra los elementos */
+    }
+
+    .icon-group-3 {
+        display: flex;
+        align-items: center;
+    }
+
+.header h1 {
+    font-size: 1.5em; /* Reduce el tamaño de la fuente */
 }
 
-td:first-child {
-    width: 140px; /* Ajusta el ancho de la columna de nombres de programación */
+.header p {
+    font-size: 1em; /* Reduce el tamaño de la fuente */
 }
+
+.tech-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 2px;
+}
+
+.tech-icon-2 {
+    width: 60px;
+    height: 60px;
+    margin-right: 2px;
+}
+
+.tech-icon-3 {
+    width: 85px;
+    height: 60px;
+    margin-right: 2px;
+}
+
+.tech-icon-4 {
+    width: 125px;
+    height: 60px;
+    margin-right: 2px;
+}
+
+.linkedin-icon {
+    width: 30px;
+    height: 30px;
+}
+
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    
+    grid-template-columns: 1fr;
 }
 
 .tab-links {
-    display: flex;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
+    flex-direction: column; /* Cambia la dirección del flex */
+}
 }
 
-.tab-link {
-    background: none;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
-    color: var(--text-color);
-    transition: color 0.3s ease;
-    outline: none;
-}
-
-.tab-link:hover {
-    color: var(--secondary-color);
-    background-color: var(--text-color);
-    border-radius: 10px 10px 0 0; /* Redondea solo la parte superior */
-}
-
-.tab-link.active {
-    color: var(--secondary-color);
-    background-color: var(--text-color); /* Añade un color de fondo diferente para el tab activo */
-    border-radius: 10px 10px 0 0; /* Redondea solo la parte superior */
-}
-
-.tab-link.active:hover {
-    background-color: var(--text-color);/* Cambia el color de fondo a blanco cuando se pasa el mouse sobre el tab activo */
-}
-/*
-.bold-text {
-    font-weight: bold; /* Hace que el texto sea negrita 
-}
-*/
-.theme-switch-wrapper {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-}
-
-.theme-switch {
-    display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 60px;
-}
-
-.theme-switch input {
-    display:none;
-}
-
-.slider {
-    background-color: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .4s;
-}
-
-.slider:before {
-    background-color: #fff;
-    bottom: 4px;
-    content: "";
-    height: 26px;
-    left: 4px;
-    position: absolute;
-    transition: .4s;
-    width: 26px;
-}
-
-input:checked + .slider {
-    background-color: #000000;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
+/* Estilos para pantallas de tamaño pequeño (por ejemplo, teléfonos móviles) */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 20px; /* Reduce el padding */
+      }
+    
+      .header {
+        flex-direction: column; /* Cambia la dirección del flex */
+        padding: 20px 10px; /* Reduce el padding */
+      }
+    
+      .icon-group{
+          padding-top: 1px;
+          justify-content:space-around;
+        align-items: center; /* Centra los elementos */
+      }
+  
+      .icon-group-2{
+          justify-content:space-around;
+          align-items: center; /* Centra los elementos */
+      }
+  
+      .icon-group-3 {
+          display: flex;
+          align-items: center;
+      }
+  
+  .header h1 {
+      font-size: 1.5em; /* Reduce el tamaño de la fuente */
+  }
+  
+  .header p {
+      font-size: 1em; /* Reduce el tamaño de la fuente */
+  }
+  
+  .tech-icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 2px;
+  }
+  
+  .tech-icon-2 {
+      width: 60px;
+      height: 60px;
+      margin-right: 2px;
+  }
+  
+  .tech-icon-3 {
+      width: 85px;
+      height: 60px;
+      margin-right: 2px;
+  }
+  
+  .tech-icon-4 {
+      width: 125px;
+      height: 60px;
+      margin-right: 2px;
+  }
+  
+  .linkedin-icon {
+      width: 30px;
+      height: 30px;
+  }
+  
+  
+  .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+  
+  .tab-links {
+      flex-direction: column; /* Cambia la dirección del flex */
+  }
+  }
