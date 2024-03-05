@@ -44,15 +44,24 @@ document.addEventListener('DOMContentLoaded', function() {
 function animateProgressBar(bar, textNode, targetProgress) {
     let currentProgress = 0;
     const step = targetProgress / 100; // adjust the speed of animation by changing the divisor
-    
+    let text = 'years of experience'
+
+    // Agrega la clase 'small-screen-font' si el ancho de la pantalla es de 480px o menos
+    if (window.matchMedia('(max-width: 480px)').matches) {
+        text='years of exp.'
+    } else {
+        textNode.classList.remove('small-screen-font');
+        text = 'years of experience'
+    }
+
         function updateProgress() {
         if (currentProgress < targetProgress) {
             currentProgress += step;
-            textNode.textContent = Math.floor(currentProgress) + " years of experience";
+            textNode.textContent = Math.floor(currentProgress) + " " + text;
             bar.style.setProperty("--progress", currentProgress);
             requestAnimationFrame(updateProgress);
         } else {
-            textNode.textContent = targetProgress + " years of experience";
+            textNode.textContent = targetProgress + " " + text;
         }
         }
     
