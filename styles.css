@@ -21,8 +21,8 @@ body {
     max-width: 1200px;
     width: 100%;
     height: 100vh;
-    padding: 0 20px;
-    background-color: var(--column-color);
+    padding: 0 70px;
+    /*background-color: var(--column-color);*/
 }
 
 .container::before {
@@ -36,7 +36,7 @@ body {
     background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     z-index: -1; /* Asegura que la imagen esté detrás del contenido del contenedor */
-    opacity: 0.08; /* Ajusta la opacidad de la imagen */
+    opacity: 0.04; /* Ajusta la opacidad de la imagen */
 }
 
 .header {
@@ -44,7 +44,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 30px 20px; /* Aumenta el relleno superior e inferior */
-    background-color: var(--primary-color);
+    /*background-color: var(--primary-color);*/
     color: white;
 }
 
@@ -119,13 +119,13 @@ border-collapse: collapse;
 
 td {
 padding: 8px;
-border: 1px solid var(--secondary-color);
+/*border: 1px solid var(--secondary-color);*/
 }
 
 .progress-bar {
 width: 100%;
 height: 20px;
-background-color: var(--secondary-color);
+/*background-color: var(--secondary-color);*/
 position: relative;
 overflow: hidden;
 border-radius: 10px; /* Añade bordes redondeados */
