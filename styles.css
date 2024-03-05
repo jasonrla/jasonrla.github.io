@@ -397,21 +397,31 @@ to {
 /* Estilos para pantallas de tamaño pequeño (por ejemplo, teléfonos móviles) */
 @media screen and (max-width: 480px) {
     .container {
+        padding-left: 20px;
         padding: 0 20px; /* Reduce el padding */
       }
     
       .header {
         flex-direction: column; /* Cambia la dirección del flex */
-        padding: 20px 10px; /* Reduce el padding */
+        padding: 20px 0px; /* Reduce el padding */
       }
     
+      #AboutMe, #Contact{
+          padding-top: 0px;
+      }
+  
+      .languages {
+          margin-top: 0px;
+      }
+  
       .icon-group{
-          padding-top: 1px;
+          padding-top: 20px;
           justify-content:space-around;
-        align-items: center; /* Centra los elementos */
+          align-items: center; /* Centra los elementos */
       }
   
       .icon-group-2{
+          padding-top: 5px;
           justify-content:space-around;
           align-items: center; /* Centra los elementos */
       }
@@ -468,3 +478,4 @@ to {
       flex-direction: column; /* Cambia la dirección del flex */
   }
   }
+  
