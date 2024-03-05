@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
             root.style.setProperty('--text-pogressbar', 'var(--text-pogressbar-light)');
         }
     });
+
+    
+
 });
 
 
@@ -86,3 +89,11 @@ function openTab(evt, tabName) {
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.tab-link').click();
 });
+
+function descargarCurriculum() {
+    // URL del archivo PDF del currículum
+    var url = 'resume/Resume Jason Lopez.pdf';
+
+    // Abre el archivo en una nueva pestaña del navegador
+    window.open(url);
+}
