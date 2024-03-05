@@ -55,6 +55,7 @@ body {
 
 a {
     text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: inherit; 
 }
 
 .tech-icon {
