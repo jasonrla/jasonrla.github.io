@@ -1,0 +1,168 @@
+:root {
+    --primary-color: rgb(11, 107, 166);
+    --secondary-color: rgb(11, 107, 166);
+    --column-color: rgb(11, 107, 166);
+    --text-color: #fff;
+    --font-family: 'Robot', monospace;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    background-color: var(--column-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px; /* Aumenta el relleno superior e inferior */
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.header h1 {
+    margin: 0 0 10px 0; /* Agrega un margen inferior */
+    font-size: 2em;
+}
+
+.header p {
+    margin: 10px 0 0 0; /* Agrega un margen superior */
+    font-size: 1.2em;
+}
+
+.img-background {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.content {
+    margin: 20px;
+    line-height: 1.6;
+}
+
+.tech-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.linkedin-icon {
+    width: 30px;
+    height: 30px;
+}
+
+
+.calendly{
+    width: 100px;
+    height: 50px;
+}
+
+.languages {
+    margin: 20px;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+}
+
+td {
+padding: 8px;
+border: 1px solid var(--secondary-color);
+}
+
+.progress-bar {
+width: 100%;
+height: 20px;
+background-color: var(--secondary-color);
+position: relative;
+overflow: hidden;
+border-radius: 10px; /* Añade bordes redondeados */
+box-shadow: 0 0 5px rgba(0, 0, 0, 0); /* Añade una sombra */
+}
+
+.progress-bar::after {
+content: '';
+display: block;
+height: 100%;
+background-color: #f0f0f0;
+position: absolute;
+top: 0;
+left: 0;
+animation: progressAnimation 2s ease forwards;
+border-radius: 10px;
+}
+
+@keyframes progressAnimation {
+from {
+    width: 0%;
+}
+to {
+    width: calc(var(--progress) * 20%);
+}
+}
+
+.progress-bar span {
+position: absolute;
+left: 15px; /* Ajusta el valor según tu preferencia */
+top: 50%;
+transform: translateY(-50%);
+color: var(--secondary-color);
+z-index: 1;
+}
+
+td:first-child {
+    width: 140px; /* Ajusta el ancho de la columna de nombres de programación */
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px; /* Espacio entre las secciones */
+}
+
+.tab-links {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease;
+    outline: none;
+}
+
+.tab-link:hover {
+    color: var(--secondary-color);
+    background-color: white;
+    border-radius: 10px 10px 0 0; /* Redondea solo la parte superior */
+}
+
+.tab-link.active {
+    color: var(--secondary-color);
+    background-color: white; /* Añade un color de fondo diferente para el tab activo */
+    border-radius: 10px 10px 0 0; /* Redondea solo la parte superior */
+}
+
+.tab-link.active:hover {
+    background-color: white; /* Cambia el color de fondo a blanco cuando se pasa el mouse sobre el tab activo */
+}
