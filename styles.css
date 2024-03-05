@@ -53,9 +53,31 @@ body {
     line-height: 1.6;
 }
 
+a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+}
+
 .tech-icon {
     width: 50px;
     height: 50px;
+    margin-right: 10px;
+}
+
+.tech-icon-2 {
+    width: 120px;
+    height: 120px;
+    margin-right: 10px;
+}
+
+.tech-icon-3 {
+    width: 170px;
+    height: 120px;
+    margin-right: 10px;
+}
+
+.tech-icon-4 {
+    width: 250px;
+    height: 120px;
     margin-right: 10px;
 }
 
@@ -165,4 +187,8 @@ td:first-child {
 
 .tab-link.active:hover {
     background-color: white; /* Cambia el color de fondo a blanco cuando se pasa el mouse sobre el tab activo */
+}
+
+.bold-text {
+    font-weight: bold; /* Hace que el texto sea negrita */
 }
