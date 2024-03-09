@@ -345,7 +345,24 @@ input:checked + .slider:before {
     filter: blur(2px);
 }
 
+#languageButton {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0. s;
+}
 
+#languageButton:hover {
+    background-color: var(--text-color); 
+    color: var(--primary-color); 
+}
 
 /* Estilos para pantallas de tamaño medio (por ejemplo, tablets) */
 @media screen and (max-width: 768px) {
