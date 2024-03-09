@@ -377,6 +377,9 @@ input:checked + .slider:before {
     padding: 15px;
 }
 
+.fas fa-external-link-alt{
+    padding-left: 10px;
+}
 /* Estilos para pantallas de tamaño medio (por ejemplo, tablets) */
 @media screen and (max-width: 768px) {
     .container {
@@ -481,7 +484,7 @@ input:checked + .slider:before {
         padding: 10px;
         padding-top: 5px;
     }
-    
+
     .small-screen-font {
         font-size: 20px; 
     }
