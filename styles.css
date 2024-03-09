@@ -378,7 +378,7 @@ input:checked + .slider:before {
 }
 
 .fas.fa-external-link-alt {
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 /* Estilos para pantallas de tamaño medio (por ejemplo, tablets) */

@@ -91,8 +91,8 @@ function loadLanguage(language) {
 
 function changeLanguage() {
     var button = document.getElementById('languageButton');
-    var language = button.textContent === 'EN' ? 'en' : 'es';
-    button.textContent = language === 'en' ? 'ES' : 'EN';
+    var language = button.textContent === 'ENG' ? 'en' : 'es';
+    button.textContent = language === 'en' ? 'ESP' : 'ENG';
     languageSettings(language);
     progressBarSettings();
 }
@@ -107,6 +107,7 @@ function languageSettings(language) {
             return response.json();
         })
         .then(data => {
+            document.getElementById('languageButton').textContent = data.langIcon;
             document.getElementById('name').textContent = data.name;
             document.getElementById('jobTitle').textContent = data.title;
             document.getElementById('aboutMe').textContent = data.aboutMe;
