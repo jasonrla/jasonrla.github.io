@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    var lang='en';
-
-    loadLanguage(lang);
+    loadLanguage('en');
 
     const progressBars = document.querySelectorAll(".progress-bar");
 
@@ -10,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const progress = parseInt(bar.getAttribute("data-progress"));
         bar.style.setProperty("--progress", progress);
         const textNode = bar.querySelector("span");
-        animateProgressBar(bar, textNode, progress, lang);
+        animateProgressBar(bar, textNode, progress);
     });
 
     const checkbox = document.getElementById('checkbox');
@@ -33,7 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function animateProgressBar(bar, textNode, targetProgress, lang) {
+function animateProgressBar(bar, textNode, targetProgress) {
+
+    var button = document.getElementById('languageButton');
+    var lang = button.textContent === 'EN' ? 'es' : 'en';
+
     let currentProgress = 0;
     const step = targetProgress / 100;
     let text = lang === 'en' ? 'years of experience' : 'años de experiencia';
