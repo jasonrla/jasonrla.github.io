@@ -118,7 +118,10 @@ function languageSettings(language) {
             document.getElementById('aboutMe_details_1').textContent = data.aboutMe_details_1;
             document.getElementById('aboutMe_details_2').textContent = data.aboutMe_details_2;
             document.getElementById('aboutMe_details_3').textContent = data.aboutMe_details_3;
-            document.getElementById('viewCertificate').textContent = data.viewCertificate;
+            document.getElementById('viewCertificate1').textContent = data.viewCertificate;
+            document.getElementById('viewCertificate2').textContent = data.viewCertificate;
+            document.getElementById('viewCertificate3').textContent = data.viewCertificate;
+            document.getElementById('viewCertificate4').textContent = data.viewCertificate;
             document.getElementById('programmingLanguage').textContent = data.programmingLanguage;
             document.getElementById('automationTools').textContent = data.automationTools;
             document.getElementById('database').textContent = data.database;
