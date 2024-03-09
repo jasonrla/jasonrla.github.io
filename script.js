@@ -82,7 +82,7 @@ function changeLanguage() {
     //var language = document.getElementById('languageSelect').value;
 
     var button = document.getElementById('languageButton');
-    var language = button.textContent === 'EN' ? 'es' : 'en';
+    var language = button.textContent === 'EN' ? 'en' : 'es';
     button.textContent = language === 'en' ? 'EN' : 'ES';
 
     fetch('texts/' + language + '.json')
