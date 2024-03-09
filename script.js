@@ -1,15 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     loadLanguage('en');
-
-    const progressBars = document.querySelectorAll(".progress-bar");
-
-    progressBars.forEach(bar => {
-        const progress = parseInt(bar.getAttribute("data-progress"));
-        bar.style.setProperty("--progress", progress);
-        const textNode = bar.querySelector("span");
-        animateProgressBar(bar, textNode, progress);
-    });
+    progressBarSettings();
 
     const checkbox = document.getElementById('checkbox');
     checkbox.addEventListener('change', () => {
@@ -30,6 +22,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+function progressBarSettings() {
+    const progressBars = document.querySelectorAll(".progress-bar");
+
+    progressBars.forEach(bar => {
+        const progress = parseInt(bar.getAttribute("data-progress"));
+        bar.style.setProperty("--progress", progress);
+        const textNode = bar.querySelector("span");
+        animateProgressBar(bar, textNode, progress);
+    });
+}
 
 function animateProgressBar(bar, textNode, targetProgress) {
 
@@ -92,6 +94,7 @@ function changeLanguage() {
     var language = button.textContent === 'EN' ? 'en' : 'es';
     button.textContent = language === 'en' ? 'ES' : 'EN';
     languageSettings(language);
+    progressBarSettings();
 }
 
 function languageSettings(language) {
@@ -104,6 +107,7 @@ function languageSettings(language) {
             return response.json();
         })
         .then(data => {
+            document.getElementById('name').textContent = data.name;
             document.getElementById('jobTitle').textContent = data.title;
             document.getElementById('aboutMe').textContent = data.aboutMe;
             document.getElementById('aboutMeTitle').textContent = data.aboutMe;
