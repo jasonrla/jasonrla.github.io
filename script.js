@@ -89,6 +89,14 @@ function changeLanguage() {
         })
         .then(data => {
             document.getElementById('jobTitle').textContent = data.title;
+            document.getElementById('aboutMe').textContent = data.aboutMe;
+            document.getElementById('skills').textContent = data.skills;
+            document.getElementById('contact').textContent = data.contact;
+            document.getElementById('downloadIcon').textContent = data.downloadResume;
+            document.getElementById('aboutMe-details-1').textContent = data.aboutMe-details-1;
+            document.getElementById('aboutMe-details-2').textContent = data.aboutMe-details-2;
+            document.getElementById('aboutMe-details-3').textContent = data.aboutMe-details-3;
+            document.getElementById('viewCertificate').textContent = data.viewCertificate;
         })
         .catch(e => {
             console.log('There was a problem with your fetch request' + e.message);
