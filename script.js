@@ -80,11 +80,12 @@ function descargarCurriculum() {
 
 function changeLanguage() {
     //var language = document.getElementById('languageSelect').value;
+
     var button = document.getElementById('languageButton');
     var language = button.textContent === 'EN' ? 'es' : 'en';
     button.textContent = language === 'en' ? 'EN' : 'ES';
 
-    fetch('/texts/' + language + '.json')
+    fetch('texts/' + language + '.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);

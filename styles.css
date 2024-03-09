@@ -4,18 +4,21 @@
     --column-color-light: rgb(255, 255, 255);
     --text-color-light: #2b2626;
     --text-pogressbar-light: #6b6b6b;
+    --btn-language-background-light: rgb(255, 255, 255);
 
     --primary-color-dark: rgb(0, 0, 0);
     --secondary-color-dark: rgb(0, 0, 0);
     --column-color-dark: rgb(0, 0, 0);
     --text-color-dark: #ffffff;
     --text-pogressbar-dark: rgb(255, 255, 255);
+    --btn-language-background-dark: transparent;
 
     --primary-color: var(--primary-color-light);
     --secondary-color: var(--secondary-color-light);
     --column-color: var(--column-color-light);
     --text-color: var(--text-color-light);
     --text-pogressbar: var(--text-pogressbar-light);
+    --btn-language-background: var(--btn-language-background-light);
     --font-family: 'Robot', monospace;
 }
 
@@ -90,6 +93,7 @@ body {
     padding: 5px;
     border-radius: 10px 10px 10px 10px; 
     margin-right: 10px;
+    vertical-align: middle;
 }
 
 .img-background {
@@ -277,6 +281,7 @@ td:first-child {
     right: 0;
     top: 0;
     transition: .4s;
+    vertical-align: middle;
 }
 
 .slider:before {
@@ -346,22 +351,25 @@ input:checked + .slider:before {
 }
 
 #languageButton {
-    background-color: var(--primary-color);
-    border: none;
-    color: var(--text-color);
-    padding: 15px 32px;
+    background-color: white;
+    color: black;
+    padding: 20px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    align-items: center;
+    vertical-align: middle;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 2px 2px;
     cursor: pointer;
-    transition-duration: 0. s;
+    transition-duration: 0.4s;
+    border-radius: 15px;
+    border: none;
 }
 
 #languageButton:hover {
-    background-color: var(--text-color); 
-    color: var(--primary-color); 
+    background-color: black; 
+    color: white; 
 }
 
 /* Estilos para pantallas de tamaño medio (por ejemplo, tablets) */
