@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     var lang='en';
 
-    changeLanguage(lang);
+    loadLanguage(lang);
 
     const progressBars = document.querySelectorAll(".progress-bar");
 
@@ -81,15 +81,18 @@ function descargarCurriculum() {
     window.open(url);
 }
 
+function loadLanguage(language) {
+    languageSettings(language);
+}
 
-
-function changeLanguage(language = 'en') {
-    //var language = document.getElementById('languageSelect').value;
-
+function changeLanguage() {
     var button = document.getElementById('languageButton');
-    //var language = button.textContent === 'EN' ? 'en' : 'es';
-    //button.textContent = language === 'en' ? 'EN' : 'ES';
-    button.textContent === 'en' ? 'ES' : 'EN';
+    var language = button.textContent === 'EN' ? 'en' : 'es';
+    button.textContent = language === 'en' ? 'ES' : 'EN';
+    languageSettings(language);
+}
+
+function languageSettings(language) {
 
     fetch('texts/' + language + '.json')
         .then(response => {
