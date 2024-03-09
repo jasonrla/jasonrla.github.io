@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
+    changeLanguage('en');
+
     const progressBars = document.querySelectorAll(".progress-bar");
 
     progressBars.forEach(bar => {
@@ -78,12 +81,13 @@ function descargarCurriculum() {
 
 
 
-function changeLanguage() {
+function changeLanguage(language = 'en') {
     //var language = document.getElementById('languageSelect').value;
 
-    var button = document.getElementById('languageButton');
-    var language = button.textContent === 'EN' ? 'en' : 'es';
-    button.textContent = language === 'en' ? 'EN' : 'ES';
+    //var button = document.getElementById('languageButton');
+    //var language = button.textContent === 'EN' ? 'en' : 'es';
+    //button.textContent = language === 'en' ? 'EN' : 'ES';
+    button.textContent === 'en' ? 'ES' : 'EN';
 
     fetch('texts/' + language + '.json')
         .then(response => {
