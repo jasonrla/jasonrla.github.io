@@ -103,8 +103,10 @@ function languageSettings(language) {
         })
         .then(data => {
             document.getElementById('jobTitle').textContent = data.title;
+            document.getElementById('aboutMe').textContent = data.aboutMe;
             document.getElementById('aboutMeTitle').textContent = data.aboutMe;
             document.getElementById('skills').textContent = data.skills;
+            document.getElementById('contactMe').textContent = data.contact;
             document.getElementById('contactMeTitle').textContent = data.contact;
             document.getElementById('downloadResume').textContent = data.downloadResume;
             document.getElementById('aboutMe_details_1').textContent = data.aboutMe_details_1;
