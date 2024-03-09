@@ -1,17 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var techIcons = document.querySelectorAll('.tech-icon');
-    techIcons.forEach(function(icon) {
-        icon.addEventListener('mouseover', function() {
-            var experience = this.getAttribute('data-experience');
-            this.nextElementSibling.textContent = experience + ' years';
-            this.nextElementSibling.style.display = 'inline';
-        });
-        icon.addEventListener('mouseout', function() {
-            this.nextElementSibling.style.display = 'none';
-        });
-    });
-
-
     const progressBars = document.querySelectorAll(".progress-bar");
 
     progressBars.forEach(bar => {
@@ -38,18 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
             root.style.setProperty('--text-pogressbar', 'var(--text-pogressbar-light)');
         }
     });
-
-    
-
 });
 
 
 function animateProgressBar(bar, textNode, targetProgress) {
     let currentProgress = 0;
-    const step = targetProgress / 100; // adjust the speed of animation by changing the divisor
+    const step = targetProgress / 100;
     let text = 'years of experience'
 
-    // Agrega la clase 'small-screen-font' si el ancho de la pantalla es de 480px o menos
     if (window.matchMedia('(max-width: 480px)').matches) {
         text='years of exp.'
     } else {
@@ -67,7 +50,6 @@ function animateProgressBar(bar, textNode, targetProgress) {
             textNode.textContent = targetProgress + " " + text;
         }
         }
-    
         updateProgress();
 }
 
@@ -85,15 +67,11 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-// Trigger click on "About Me" tab on page load
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.tab-link').click();
 });
 
 function descargarCurriculum() {
-    // URL del archivo PDF del currículum
     var url = 'resume/Resume Jason Lopez.pdf';
-
-    // Abre el archivo en una nueva pestaña del navegador
     window.open(url);
 }
