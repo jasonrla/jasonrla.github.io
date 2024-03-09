@@ -156,7 +156,7 @@ a {
 }
 
 .languages {
-    margin: 10px;
+    margin: 15px;
 }
 
 table {
@@ -372,6 +372,11 @@ input:checked + .slider:before {
     color: white; 
 }
 
+
+.paragraph{
+    padding: 15px;
+}
+
 /* Estilos para pantallas de tamaño medio (por ejemplo, tablets) */
 @media screen and (max-width: 768px) {
     .container {
@@ -381,6 +386,11 @@ input:checked + .slider:before {
     .header {
         flex-direction: column;
         padding: 20px 10px;
+    }
+
+    .paragraph{
+        padding: 10px;
+        padding-top: 5px;
     }
 
     #AboutMe, #Contact{
@@ -467,6 +477,11 @@ input:checked + .slider:before {
         padding: 20px 0px; 
     }
 
+    .paragraph{
+        padding: 10px;
+        padding-top: 5px;
+    }
+    
     .small-screen-font {
         font-size: 20px; 
     }
@@ -481,6 +496,11 @@ input:checked + .slider:before {
 
     #Contact.tab-content p {
         padding: 5px; 
+    }
+
+    #Skills.tab-content {
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
     }
 
     .languages {

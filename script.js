@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    changeLanguage('en');
+    var lang='en';
+
+    changeLanguage(lang);
 
     const progressBars = document.querySelectorAll(".progress-bar");
 
@@ -8,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const progress = parseInt(bar.getAttribute("data-progress"));
         bar.style.setProperty("--progress", progress);
         const textNode = bar.querySelector("span");
-        animateProgressBar(bar, textNode, progress);
+        animateProgressBar(bar, textNode, progress, lang);
     });
 
     const checkbox = document.getElementById('checkbox');
@@ -31,16 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function animateProgressBar(bar, textNode, targetProgress) {
+function animateProgressBar(bar, textNode, targetProgress, lang) {
     let currentProgress = 0;
     const step = targetProgress / 100;
-    let text = 'years of experience'
+    let text = lang === 'en' ? 'years of experience' : 'años de experiencia';
 
     if (window.matchMedia('(max-width: 480px)').matches) {
-        text='years of exp.'
+        text = lang === 'en' ? 'years of exp.' : 'años de exp.'
     } else {
         textNode.classList.remove('small-screen-font');
-        text = 'years of experience'
+        text = lang === 'en' ? 'years of experience' : 'años de experiencia';
     }
 
         function updateProgress() {
@@ -84,7 +86,7 @@ function descargarCurriculum() {
 function changeLanguage(language = 'en') {
     //var language = document.getElementById('languageSelect').value;
 
-    //var button = document.getElementById('languageButton');
+    var button = document.getElementById('languageButton');
     //var language = button.textContent === 'EN' ? 'en' : 'es';
     //button.textContent = language === 'en' ? 'EN' : 'ES';
     button.textContent === 'en' ? 'ES' : 'EN';
@@ -100,7 +102,7 @@ function changeLanguage(language = 'en') {
             document.getElementById('jobTitle').textContent = data.title;
             document.getElementById('aboutMe').textContent = data.aboutMe;
             document.getElementById('skills').textContent = data.skills;
-            document.getElementById('contact').textContent = data.contact;
+            document.getElementById('contactMe').textContent = data.contact;
             document.getElementById('downloadResume').textContent = data.downloadResume;
             document.getElementById('aboutMe_details_1').textContent = data.aboutMe_details_1;
             document.getElementById('aboutMe_details_2').textContent = data.aboutMe_details_2;
