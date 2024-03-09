@@ -75,3 +75,22 @@ function descargarCurriculum() {
     var url = 'resume/Resume Jason Lopez.pdf';
     window.open(url);
 }
+
+
+
+function changeLanguage() {
+    var language = document.getElementById('languageSelect').value;
+    fetch('/texts/' + language + '.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            document.getElementById('jobTitle').textContent = data.title;
+        })
+        .catch(e => {
+            console.log('There was a problem with your fetch request' + e.message);
+        });
+}
