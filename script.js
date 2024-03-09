@@ -92,11 +92,21 @@ function changeLanguage() {
             document.getElementById('aboutMe').textContent = data.aboutMe;
             document.getElementById('skills').textContent = data.skills;
             document.getElementById('contact').textContent = data.contact;
-            document.getElementById('downloadIcon').textContent = data.downloadResume;
+            document.getElementById('downloadResume').textContent = data.downloadResume;
             document.getElementById('aboutMe-details-1').textContent = data.aboutMe-details-1;
             document.getElementById('aboutMe-details-2').textContent = data.aboutMe-details-2;
             document.getElementById('aboutMe-details-3').textContent = data.aboutMe-details-3;
             document.getElementById('viewCertificate').textContent = data.viewCertificate;
+            document.getElementById('programmingLanguage').textContent = data.programmingLanguage;
+            document.getElementById('automationTools').textContent = data.automationTools;
+            document.getElementById('database').textContent = data.database;
+            document.getElementById('otherTools').textContent = data.otherTools;
+            document.getElementById('email').textContent = data.email;
+            document.getElementById('phone').textContent = data.phone;
+            document.getElementById('location').textContent = data.location;
+            document.getElementById('timeZone').textContent = data.timeZone;
+            document.getElementById('scheduleMetting').textContent = data.scheduleMetting;
+
         })
         .catch(e => {
             console.log('There was a problem with your fetch request' + e.message);

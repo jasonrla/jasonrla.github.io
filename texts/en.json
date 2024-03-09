@@ -7,5 +7,14 @@
     "aboutMe-details-1": "Experienced Senior QA Engineer with a passion for precision and innovation. Skilled in API, automation, mobile, and performance testing, backed by certifications in ISTQB and Scrum Master. Thrives in fast-paced, agile environments, fostering teamwork and delivering top-notch results. I am fluent in English, and have the ability to guide and support teams in achieving their goals.",
     "aboutMe-details-2": "Experience testing:",
     "aboutMe-details-3": "Distributed environments | Microservices | Cloud-based applications | Banking and Insurance applications | Startup environment | Databases | Continuous Integration | AWS EC2 | AWS S3 | AWS RDS",
-    "viewCertificate": "View Certificate"
+    "viewCertificate": "View Certificate",
+    "programmingLanguage": "Programming Languages",
+    "automationTools": "Automation Tools",
+    "databases": "Databases",
+    "otherTools": "Other Tools",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "timeZone": "Time Zone",
+    "scheduleMetting": "Schedule a Meeting"
 }

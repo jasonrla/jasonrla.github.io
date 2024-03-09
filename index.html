@@ -36,10 +36,10 @@
                 <button id="aboutMe" class="tab-link" onclick="openTab(event, 'AboutMe')">About Me</button>
                 <button id="skills" class="tab-link" onclick="openTab(event, 'Skills')">Skills</button>
                 <button id="contact" class="tab-link bold-text" onclick="openTab(event, 'Contact')">Contact Me</button>
-                <button class="tab-link" onclick=descargarCurriculum()><i id="downloadIcon" class="fa fa-download"></i>Download Resume</button>
+                <button id="downloadResume" class="tab-link" onclick=descargarCurriculum()><i id="downloadIcon" class="fa fa-download"></i>Download Resume</button>
             </div>
             <div id="AboutMe" class="tab-content">
-                <h2>About Me</h2>
+                <h2 id="AboutMe">About Me</h2>
                 <p id="aboutMe-details-1">Experienced Senior QA Engineer with a passion for precision and innovation. Skilled in API, automation, mobile, and performance testing, backed by certifications in ISTQB and Scrum Master. Thrives in fast-paced, agile environments, fostering teamwork and delivering top-notch results. I am fluent in English, and have the ability to guide and support teams in achieving their goals.</p>
                 <p id="aboutMe-details-2">Experience testing:</p>
                 <p id="aboutMe-details-3">Distributed environments | Microservices | Cloud-based applications | Banking and Insurance applications | Startup environment | Databases | Continuous Integration | AWS EC2 | AWS S3 | AWS RDS</p>
@@ -72,13 +72,13 @@
                 </div>
             </div>
             <div id="Contact" class="tab-content">
-                <h2>Contact Me</h2>
-                <p>Email: <a href="mailto:jasonlopez@gmail.com">jasonrla@gmail.com <i class="fas fa-external-link-alt" target="_blank"></i></a></p>
-                <p>Phone: <a href="https://api.whatsapp.com/send/?phone=51935985181&text&type=phone_number&app_absent=0" target="_blank">+51 935985181 <i class="fas fa-external-link-alt"></i></a></p>
-                <p>Location: Lima, Peru</p>
-                <p>Time Zone: GMT-5</p>
+                <h2 id="Contact">Contact Me</h2>
+                <p id="email">Email: <a href="mailto:jasonlopez@gmail.com">jasonrla@gmail.com <i class="fas fa-external-link-alt" target="_blank"></i></a></p>
+                <p id="phone">Phone: <a href="https://api.whatsapp.com/send/?phone=51935985181&text&type=phone_number&app_absent=0" target="_blank">+51 935985181 <i class="fas fa-external-link-alt"></i></a></p>
+                <p id="location">Location: Lima, Peru</p>
+                <p id="timeZone">Time Zone: GMT-5</p>
                 <div class="icon-group-3">  
-                    <p>Schedule a meeting: </p>
+                    <p id="scheduleMetting">Schedule a meeting: </p>
                     <a href="https://calendly.com/jasonlopez-qaengineer" target="_blank">
                         <img class='calendly' src="images/colour/Calendly.jpeg" alt="Schedule a meeting on Calendly">
                     </a>
@@ -89,7 +89,7 @@
                 <div class="grid-container">
             
                     <section class="languages">
-                    <h2>Programming Languages</h2>
+                    <h2 id="programmingLanguage">Programming Languages</h2>
                     <table>
                         <tr>
                             <td>JavaScript</td>
@@ -119,7 +119,7 @@
                 </section>
         
                 <section class="languages">
-                    <h2>Automation Tools</h2>
+                    <h2 id="automationTools">Automation Tools</h2>
                     <table>
                         <tr>
                             <td>Selenium</td>
@@ -155,7 +155,7 @@
                 </section>
         
                 <section class="languages">
-                    <h2>Database</h2>
+                    <h2 id="database">Database</h2>
                     <table>
                         <tr>
                             <td>SQL server</td>
@@ -178,7 +178,7 @@
                         </table>
                 </section>
                 <section class="languages">
-                    <h2>Other tools</h2>
+                    <h2 id="otherTools">Other tools</h2>
                     <table>
                         <tr>
                             <td>Gitlab CI</td>
