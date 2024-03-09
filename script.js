@@ -79,7 +79,11 @@ function descargarCurriculum() {
 
 
 function changeLanguage() {
-    var language = document.getElementById('languageSelect').value;
+    //var language = document.getElementById('languageSelect').value;
+    var button = document.getElementById('languageButton');
+    var language = button.textContent === 'EN' ? 'es' : 'en';
+    button.textContent = language === 'en' ? 'EN' : 'ES';
+
     fetch('/texts/' + language + '.json')
         .then(response => {
             if (!response.ok) {
@@ -93,9 +97,9 @@ function changeLanguage() {
             document.getElementById('skills').textContent = data.skills;
             document.getElementById('contact').textContent = data.contact;
             document.getElementById('downloadResume').textContent = data.downloadResume;
-            document.getElementById('aboutMe-details-1').textContent = data.aboutMe-details-1;
-            document.getElementById('aboutMe-details-2').textContent = data.aboutMe-details-2;
-            document.getElementById('aboutMe-details-3').textContent = data.aboutMe-details-3;
+            document.getElementById('aboutMe_details_1').textContent = data.aboutMe_details_1;
+            document.getElementById('aboutMe_details_2').textContent = data.aboutMe_details_2;
+            document.getElementById('aboutMe_details_3').textContent = data.aboutMe_details_3;
             document.getElementById('viewCertificate').textContent = data.viewCertificate;
             document.getElementById('programmingLanguage').textContent = data.programmingLanguage;
             document.getElementById('automationTools').textContent = data.automationTools;

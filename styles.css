@@ -345,18 +345,7 @@ input:checked + .slider:before {
     filter: blur(2px);
 }
 
-#languageSelect {
-    background-color: #f8f9fa;
-    border: none;
-    color: #343a40;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
 
-#languageSelect:focus {
-outline: none;
-}
 
 /* Estilos para pantallas de tamaño medio (por ejemplo, tablets) */
 @media screen and (max-width: 768px) {
