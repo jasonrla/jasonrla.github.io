@@ -36,7 +36,7 @@ function progressBarSettings() {
 function animateProgressBar(bar, textNode, targetProgress) {
 
     var button = document.getElementById('languageButton');
-    var lang = button.textContent === 'EN' ? 'es' : 'en';
+    var lang = button.textContent === 'ENG' ? 'es' : 'en';
 
     let currentProgress = 0;
     const step = targetProgress / 100;
